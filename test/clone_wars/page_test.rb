@@ -1,5 +1,5 @@
 require './test/test_helper'
-require './lib/clone_wars/page'
+require './lib/clone_wars'
 
 class PageTest < Minitest::Test
 

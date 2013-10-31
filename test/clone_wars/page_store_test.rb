@@ -29,19 +29,17 @@ class PageStoreTest < MiniTest::Test
   end
 
   def test_it_has_a_database
-    # skip
     assert PageStore.database
   end
 
   def test_it_can_find_by_url
-    # skip
     page = PageStore.create(title: 'testing title find')
     found_page = PageStore.find_by_url(page.url)
     assert_equal page.title, found_page.title 
   end
 
   def test_it_can_find_with_id
-    page = PageStore.create(title: 'wednesday')
+    PageStore.create(title: 'wednesday')
     assert_equal "wednesday", PageStore.find(1).title
   end
 

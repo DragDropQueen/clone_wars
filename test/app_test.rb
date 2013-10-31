@@ -72,4 +72,8 @@ class CloneWarsAppTest < Minitest::Test
     assert_equal "This is the new title", PageStore.find(1).title
   end
 
+  def test_posts_page
+    get '/posts'
+    assert_equal 200, last_response.status
+  end
 end

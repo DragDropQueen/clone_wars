@@ -54,6 +54,10 @@ class CloneWarsApp < Sinatra::Base
     end
   end
 
+  get '/posts' do
+    erb :post, :locals => { :post => PostStore.all }
+  end
+
   get '/:url' do |url|
     page = PageStore.find_by_url(url)
     if page
